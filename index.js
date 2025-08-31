@@ -9,13 +9,17 @@
  * @Copyright: 2017
  */
 
-'use strict';
-var renderer = require('./lib/renderer');
+"use strict";
+const Renderer = require("./lib/renderer");
+const renderer = new Renderer(hexo);
+function render(data, options) {
+  return renderer.render(data, options);
+}
 
-hexo.extend.renderer.register('md', 'html', renderer, true);
-hexo.extend.renderer.register('markdown', 'html', renderer, true);
-hexo.extend.renderer.register('mkd', 'html', renderer, true);
-hexo.extend.renderer.register('mkdn', 'html', renderer, true);
-hexo.extend.renderer.register('mdwn', 'html', renderer, true);
-hexo.extend.renderer.register('mdtxt', 'html', renderer, true);
-hexo.extend.renderer.register('mdtext', 'html', renderer, true);
+hexo.extend.renderer.register("md", "html", render, true);
+hexo.extend.renderer.register("markdown", "html", render, true);
+hexo.extend.renderer.register("mkd", "html", render, true);
+hexo.extend.renderer.register("mkdn", "html", render, true);
+hexo.extend.renderer.register("mdwn", "html", render, true);
+hexo.extend.renderer.register("mdtxt", "html", render, true);
+hexo.extend.renderer.register("mdtext", "html", render, true);

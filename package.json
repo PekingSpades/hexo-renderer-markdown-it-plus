@@ -25,6 +25,7 @@
   "dependencies": {
     "@iktakahiro/markdown-it-katex": "^4.0.1",
     "clone": "^2.1.1",
+    "hexo-util": "^3.3.0",
     "highlight.js": "^11.5.1",
     "markdown-it": "^13.0.1",
     "markdown-it-abbr": "^1.0.4",
